@@ -1,0 +1,35 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    background: rgb(14, 14, 14);
+    z-index: 9;
+}
+
+.max-width{
+    margin: auto;
+    display: flex;
+    padding: 0 80px;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+button{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: rgb(79, 170, 186);
+}
+button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(35, 83, 89);
+}

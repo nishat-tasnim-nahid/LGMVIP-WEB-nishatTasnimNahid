@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- font awasome -->
+    <script src="https://kit.fontawesome.com/a364c6e355.js" crossorigin="anonymous"></script>
+
+    <title>First Task</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">ZIPPY</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">TEAM</a>
+                <a href="#">HOME</a>
+                <a href="#">HOME</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <img class="image-slide active" src="Images/img1.jpg" alt="">
+        <img class="image-slide" src="Images/img2.jpg" alt="">
+        <img class="image-slide" src="Images/img3.jpg" alt="">
+        <img class="image-slide" src="Images/img4.jpg" alt="">
+        <div class="content active">
+            <h2>One page promising to <br>fill all you needs!</h2>
+            <p>This is Photoshop's version of consect sit<br> Lorem ipsum dolor sit amet.</p>
+            <a href="#">Learn More</a>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="content">
+            <h2>One page promising to <br>fill all you needs!</h2>
+            <p>This is Photoshop's version of consect sit<br> Lorem ipsum dolor sit amet.</p>
+            <a href="#">Learn More</a>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="content">
+            <h2>One page promising to <br>fill all you needs!</h2>
+            <p>This is Photoshop's version of consect sit<br> Lorem ipsum dolor sit amet.</p>
+            <a href="#">Learn More</a>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="content">
+            <h2>One page promising to <br>fill all you needs!</h2>
+            <p>This is Photoshop's version of consect sit<br> Lorem ipsum dolor sit amet.</p>
+            <a href="#">Learn More</a>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn "></div>
+            <div class="nav-btn "></div>
+            <div class="nav-btn "></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        // javascript of responsive navigation menu
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // javascript for image slider navigation
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".image-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function (manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i)
+            })
+        })
+
+    </script>
+
+
+    <!-- welcome part1 -->
+    <div>
+        <div class=" container">
+            <h1 class="mt-5 title"><b>Welcome to Zippy</b></h1>
+        </div>
+        <div class="container welcomeArea1 d-flex justify-content-center">
+
+            <div class="welcomeText1">
+                <h5>This is Photoshop's version of consect sit<br>
+                    Lorem ipsum dolor sit amet consect dolor sit<br>
+                    etur adipisicing elit. Nam, eos! Lorem ta amet<br>
+                    ipsum dolor sit amet, consectetur auctor <br>auctor.</h5>
+            </div>
+
+            <div class="welcomeText1">
+                <img src="Images//umbrella.ico" alt="" height="150px" width="150px">
+            </div>
+        </div>
+    </div>
+
+    <!-- welcome part2 -->
+    <div class="container welcomeArea2 d-flex justify-content-center">
+        <div class="welcomeText2">
+            <a href="#"><i class="far fa-bell icon" style="font-size:60px;"></i></a>
+            <h4 style="margin-bottom: 25px;"><b>CONNECTION</b></h4>
+            <p style="margin-bottom: 35px;">Lorem ipsum dolor <br> sit amet consectetur<br>adipisicing elit.
+                Distinct<br>autem, at commodi<br>vero dolorem hic</p>
+            <a class="button" href="">LEARN MORE</a>
+        </div>
+
+        <div class="welcomeText2">
+            <a href="#"><i class="far fa-envelope icon" style="font-size:60px;"></i></a>
+            <h4 style="margin-bottom: 25px;"><b>MESSAGE</b></h4>
+            <p style="margin-bottom: 35px;">Lorem ipsum dolor <br> sit amet consectetur<br>
+                adipisicing elit. Distinct<br>
+                autem, at commodi<br>vero dolorem hic</p>
+            <a class="button" href="">LEARN MORE</a>
+        </div>
+
+        <div class="welcomeText2">
+            <a href="#"><i class="far fa-address-book icon" style="font-size:60px;"></i></a>
+            <h4 style="margin-bottom: 25px;"><b>ADDRESS</b></h4>
+            <p style="margin-bottom: 35px;">Lorem ipsum dolor <br> sit amet consectetur<br>
+                adipisicing elit. Distinct<br>
+                autem, at commodi<br>vero dolorem hic</p>
+            <a class="button" href="">LEARN MORE</a>
+        </div>
+        <!-- <hr style="height: 30px; border-radius: 3px; color: rgb(158, 29, 29); margin-top: 70px;"> -->
+    </div>
+
+    <hr class="container"
+        style="height: 4px; width: 33%; border-radius: 3px; color: rgb(191, 184, 184); margin-top: 70px;">
+
+    <!-- products -->
+    <div>
+        <div class="container">
+            <h1 class="title">Products</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-0">
+            <div class="col">
+                <div class="card border border-white border-0">
+                    <img class="productImage" src="Images/dress1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body productBody1">
+                        <h5 class="card-title">Long Jecket</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content. Some quick example text to build on the card title.</p>
+                        <a class="productButton" href="">LAUNCH CASE STUDY</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border border-white border-0">
+                    <img class="productImage" src="Images/dress2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body productBody2">
+                        <h5 class="card-title">Trendy Coat</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content. Some quick example text to build on the card title.</p>
+                        <a class="productButton" href="">LAUNCH CASE STUDY</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border border-white border-0">
+                    <img class="productImage" src="Images/dress5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body productBody1">
+                        <h5 class="card-title">Paige Skirt Coat</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content. Some quick example text to build on the card title.</p>
+                        <a class="productButton" href="">LAUNCH CASE STUDY</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border border-white border-0">
+                    <img class="productImage" src="Images/dress6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body productBody2">
+                        <h5 class="card-title">Fur Cloak</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content. Some quick example text to build on the card title.</p>
+                        <a class="productButton" href="">LAUNCH CASE STUDY</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pricing -->
+    <div>
+        <div class=" container">
+            <h1 class="mt-5 title"><b>Pricing Table</b></h1>
+        </div>
+        <div class="container PriceArea d-flex justify-content-center">
+            <div class="singlePrice">
+                <h6 style="margin-bottom: 15px;"><b>STANDARD PLAN</b></h6>
+                <p style="color: #ccc">Free</p>
+                <p style="margin-bottom: 35px;">2GB Available <br> 15 max cookies <br> 3M availableand <br>Ads Free</p>
+                <a class="button" href="">BUY</a>
+
+            </div>
+            <div class="singlePrice" style="border-right: 4px solid darkgray; border-radius: 3px; height: 250px;">
+
+            </div>
+            <div class="singlePrice">
+                <h6 style="margin-bottom: 15px;"><b>BUSINESS PLAN</b></h6>
+                <p style="color: #ccc">195/MONTH</p>
+                <p style="margin-bottom: 35px;">18GB Available<br>75 max cookies <br>3M availableand max <br>Ads Free
+                </p>
+                <a class="button" href="">BUY</a>
+            </div>
+            <div class="singlePrice" style="border-right: 4px solid darkgray; border-radius: 3px; height: 250px;">
+            </div>
+            <div class="singlePrice">
+                <h6 style="margin-bottom: 15px;"><b>PREMIMUM PLAN</b></h6>
+                <p style="color: #ccc">145/MONTH</p>
+                <p style="margin-bottom: 35px;">138GB Available <br>Unlimited cookies <br>Unlimited available max
+                    <br>Ads Free
+                </p>
+                <a class="button" href="">BUY</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- video section -->
+    <div class="videoPart mt-5">
+        <h1 class="title mt-5">Video Demo</h1>
+        <div>
+            <video width="33%" height="400px" controls>
+                <source src="video/video4.mp4" type="">
+            </video>
+            <video width="33%" height="385px" controls>
+                <source src="video/video2.mp4" type="">
+            </video>
+            <video width="33%" height="385px" controls>
+                <source src="video/video3.mp4" type="">
+            </video>
+        </div>
+
+    </div>
+
+
+    <!-- team -->
+    <div class="">
+        <div class=" d-flex justify-content-center">
+            <div>
+                <h1 class="mt-5 title"><b>Zippy Team</b></h1>
+            </div>
+        </div>
+        <div class="container teamArea">
+            <div>
+                <div class="singleTeam">
+                    <img src="https://files.fm/thumb_show.php?i=qw4gpg4vh" alt="">
+                    <div class="socialIcon">
+                        <p>
+                            <a href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i style="color: white;" class="fab fa-twitter"></i></a>
+                            <a href="#"> <i style="color: white;" class="fab fa-linkedin-in "></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h6><b>SUHANA SHEK</b></h6>
+                    <p style="color: darkgray; font-size: small;">Creative Head</p>
+                </div>
+            </div>
+            <div>
+                <div class="singleTeam">
+                    <img src="https://files.fm/thumb_show.php?i=bt84z8cc5" alt="">
+                    <div class="socialIcon">
+                        <p>
+                            <a href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i style="color: white;" class="fab fa-twitter"></i></a>
+                            <a href="#"> <i style="color: white;" class="fab fa-linkedin-in "></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h6><b>PAYEL SORKAR</b></h6>
+                    <p style="color: darkgray; font-size: small;">Design Director</p>
+                </div>
+            </div>
+            <div>
+                <div class="singleTeam">
+                    <img src="https://files.fm/thumb_show.php?i=v9gw95sgj" alt="">
+                    <div class="socialIcon">
+                        <p>
+                            <a href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i style="color: white;" class="fab fa-twitter"></i></a>
+                            <a href="#"> <i style="color: white;" class="fab fa-linkedin-in "></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h6><b>RASHED MITRA</b></h6>
+                    <p style="color: darkgray; font-size: small;">Senior Deginer</p>
+                </div>
+            </div>
+        </div>
+        <div class="container teamArea">
+            <div>
+                <div class="singleTeam">
+                    <img src="https://files.fm/thumb_show.php?i=hftyyvx94" alt="">
+                    <div class="socialIcon">
+                        <p>
+                            <a href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i style="color: white;" class="fab fa-twitter"></i></a>
+                            <a href="#"> <i style="color: white;" class="fab fa-linkedin-in "></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h6><b>KAMAL HOSSEN</b></h6>
+                    <p style="color: darkgray; font-size: small;">Marketing Manager</p>
+                </div>
+            </div>
+            <div>
+                <div class="singleTeam">
+                    <img src="https://files.fm/thumb_show.php?i=zjt35rj7q" alt="">
+                    <div class="socialIcon">
+                        <p>
+                            <a href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i style="color: white;" class="fab fa-twitter"></i></a>
+                            <a href="#"> <i style="color: white;" class="fab fa-linkedin-in "></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h6><b>MEHU SULTANA</b></h6>
+                    <p style="color: darkgray; font-size: small;">Manager</p>
+                </div>
+            </div>
+            <div>
+                <div class="singleTeam">
+                    <img src="https://files.fm/thumb_show.php?i=yytfzqavw" alt="">
+                    <div class="socialIcon">
+                        <p>
+                            <a href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i style="color: white;" class="fab fa-twitter"></i></a>
+                            <a href="#"> <i style="color: white;" class="fab fa-linkedin-in "></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h6><b>HALIMA KHAN</b></h6>
+                    <p style="color: darkgray; font-size: small;">Senior Deginer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIFE IN ZIPPY -->
+    <div class="container zippyLife">
+
+        <div class="imgSlides">
+            <div class="textNumber">1 / 6</div>
+            <img src="Images/zippy/zippy1.jfif" alt="" style="width: 100%;">
+        </div>
+
+        <div class="imgSlides">
+            <div class="textNumber">2 / 6</div>
+            <img src="Images/zippy/zippy2.jfif" alt="" style="width: 100%;">
+        </div>
+
+        <div class="imgSlides">
+            <div class="textNumber">3 / 6</div>
+            <img src="Images/zippy/zippy3.jfif" alt="" style="width: 100%;">
+        </div>
+
+        <div class="imgSlides">
+            <div class="textNumber">4 / 6</div>
+            <img src="Images/zippy/zippy4.jfif" alt="" style="width: 100%;">
+        </div>
+
+        <div class="imgSlides">
+            <div class="textNumber">5 / 6</div>
+            <img src="Images/zippy/zippy5.jfif" alt="" style="width: 100%;">
+        </div>
+
+        <div class="imgSlides">
+            <div class="textNumber">6 / 6</div>
+            <img src="Images/zippy/zippy6.jfif" alt="" style="width: 100%;">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❮</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="Images/zippy/zippy1.jfif" alt="" style="width: 100%;"
+                    onclick="currentSlider(1)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Images/zippy/zippy2.jfif" alt="" style="width: 100%;"
+                    onclick="currentSlider(2)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Images/zippy/zippy3.jfif" alt="" style="width: 100%;"
+                    onclick="currentSlider(3)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Images/zippy/zippy4.jfif" alt="" style="width: 100%;"
+                    onclick="currentSlider(4)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Images/zippy/zippy5.jfif" alt="" style="width: 100%;"
+                    onclick="currentSlider(5)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Images/zippy/zippy6.jfif" alt="" style="width: 100%;"
+                    onclick="currentSlider(6)">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlider(n) {
+            showSlides(slideIndex = n)
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("imgSlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+
+    </script>
+
+
+
+
+
+
+    <!-- signup -->
+    <div class="signupArea">
+        <div class=" container">
+            <h1 class="mt-5 title"><b>Newsletter Signup</b></h1>
+        </div>
+        <div class="container signupInput">
+            <input placeholder="abc@example.com" name="abc@example.com" type="email">
+            <button>SIGNUP</button>
+        </div>
+    </div>
+
+    <!-- blog -->
+    <div>
+        <div class=" container">
+            <h1 class="mt-5 title"><b>Blog</b></h1>
+        </div>
+        <div class="container blogArea d-flex justify-content-center">
+            <div class="singleBlog">
+                <img src="Images/blog1.jpg" alt="" height="100px" width="200px">
+                <h6 style="margin-bottom: 15px; margin-top: 25px;"><b>LOREM ISPUM DOLOR <br> SIT AMET</b></h6>
+                <p style="color: #ccc">15 Jan, 2015</p>
+                <p style="margin-bottom: 35px;">Lorem ipsum dolor sit<br> sectetur adipisicing.<br>Distinct,commodi
+                    sit<br>vero dolorem.</p>
+                <a class="button" href="">READ MORE</a>
+
+            </div>
+
+            <div class="singleBlog">
+                <img src="Images/blog2.jpg" alt="" height="100px" width="200px">
+                <h6 style="margin-bottom: 15px; margin-top: 25px;"><b>LOREM ISPUM DOLOR <br> SIT AMET</b></h6>
+                <p style="color: #ccc">15 Jan, 2015</p>
+                <p style="margin-bottom: 35px;">Lorem ipsum dolor sit<br> sectetur adipisicing.<br>Distinct,commodi
+                    sit<br>vero dolorem.</p>
+                <a class="button" href="">READ MORE</a>
+            </div>
+
+            <div class="singleBlog">
+                <img src="Images/blog4.jpg" alt="" height="100px" width="200px">
+                <h6 style="margin-bottom: 15px; margin-top: 25px;"><b>LOREM ISPUM DOLOR <br> SIT AMET</b></h6>
+                <p style="color: #ccc">15 Jan, 2015</p>
+                <p style="margin-bottom: 35px;">Lorem ipsum dolor sit<br> sectetur adipisicing.<br>Distinct,commodi
+                    sit<br>vero dolorem.</p>
+                <a class="button" href="">READ MORE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div class="contactArea">
+        <div class="imageArea">
+            <img src="Images/map1.jfif" alt="" width="100%" height="80%">
+        </div>
+        <div class="contactInput">
+            <form action="submit">
+                <h1>Contact</h1> <br>
+                <p style="margin-top: 0px; margin-bottom: 4px;"><b>NAME</b></p>
+                <input type="text">
+                <p style="margin-top: 20px; margin-bottom: 4px;"><b>EMAIL ADDRESS</b></p>
+                <input type="email">
+                <p style="margin-top: 20px; margin-bottom: 4px;"><b>SUBJECT</b></p>
+                <input type="text">
+                <p style="margin-top: 20px; margin-bottom: 4px;"><b>MESSAGE</b></p>
+                <textarea style=" border: 0px solid white;
+            border-radius: 3px;
+            box-shadow:2px 2px 2px rgb(199, 198, 198);" name="message" id="" cols="53" rows="7"></textarea> <br>
+                <button style="margin-top: 10px;" type="submit">SEND</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="container footerArea d-flex justify-content-center">
+        <div class="footerText">
+            <p style="margin-bottom: 15px;"><b>OFFICE ADDRESS</b></p>
+            <p style="margin-bottom: 35px;">Lorem ipsum dolor 234<br> 1200 consectetur<br> adipisicing</p>
+        </div>
+        <div class="footerText">
+            <p style="margin-bottom: 15px;"><b>FOLLOW US</b></p>
+            <a href="#"><i class="fab fa-behance footerIcon"></i></a>
+            <a href="#"><i class="fab fa-twitter footerIcon"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in footerIcon"></i></a> <br>
+            <a href="#"><i class="fab fa-facebook-f footerIcon"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g footerIcon"></i></a>
+            <a href="#"><i class="fab fa-tumblr footerIcon"></i></a>
+        </div>
+
+        <div class="footerText">
+            <p style="margin-bottom: 15px;"><b>CONTACT US</b></p>
+            <p style="margin-bottom: 35px;"><b>.</b> 123 456 789<br> zippy@skype<br>enquery@zippy.com</p>
+        </div>
+    </div>
+    <!-- <div class=" d-flex justify-content-center mt-5">
+        <div>
+            <p>@copyright.nishatTasnim</p>
+        </div>
+    </div> -->
+
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
