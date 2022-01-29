@@ -16,7 +16,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 720px;
+    padding: 15px 650px;
     transition: 0.5s ease;
 }
 
@@ -37,7 +37,7 @@ header .navigation .navigation-items a{
     font-size: 1em;
     font-weight: 900;
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 20px;
     transition: 0.3s ease;
 }
 header .navigation .navigation-items a:before{
@@ -55,7 +55,7 @@ header .navigation .navigation-items a:hover:before{
 }
 
 section{
-    padding: 120px 720px;
+    padding: 120px 670px;
 }
 .home{
     position: relative;
