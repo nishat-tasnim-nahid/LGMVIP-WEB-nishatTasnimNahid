@@ -79,7 +79,7 @@
         </div>
     </section>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         // javascript of responsive navigation menu
         const menuBtn = document.querySelector(".menu-btn");
         const navigation = document.querySelector(".navigation");
@@ -118,7 +118,7 @@
             })
         })
 
-    </script>
+    </script> -->
 
 
     <!-- welcome part1 -->
@@ -395,104 +395,23 @@
     </div>
 
     <!-- LIFE IN ZIPPY -->
-    <div class="container zippyLife">
-
-        <div class="imgSlides">
-            <div class="textNumber">1 / 6</div>
-            <img src="Images/zippy/zippy1.jfif" alt="" style="width: 100%;">
-        </div>
-
-        <div class="imgSlides">
-            <div class="textNumber">2 / 6</div>
-            <img src="Images/zippy/zippy2.jfif" alt="" style="width: 100%;">
-        </div>
-
-        <div class="imgSlides">
-            <div class="textNumber">3 / 6</div>
-            <img src="Images/zippy/zippy3.jfif" alt="" style="width: 100%;">
-        </div>
-
-        <div class="imgSlides">
-            <div class="textNumber">4 / 6</div>
-            <img src="Images/zippy/zippy4.jfif" alt="" style="width: 100%;">
-        </div>
-
-        <div class="imgSlides">
-            <div class="textNumber">5 / 6</div>
-            <img src="Images/zippy/zippy5.jfif" alt="" style="width: 100%;">
-        </div>
-
-        <div class="imgSlides">
-            <div class="textNumber">6 / 6</div>
-            <img src="Images/zippy/zippy6.jfif" alt="" style="width: 100%;">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❮</a>
-
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
-
-        <div class="row">
-            <div class="column">
-                <img class="demo cursor" src="Images/zippy/zippy1.jfif" alt="" style="width: 100%;"
-                    onclick="currentSlider(1)">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Images/zippy/zippy2.jfif" alt="" style="width: 100%;"
-                    onclick="currentSlider(2)">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Images/zippy/zippy3.jfif" alt="" style="width: 100%;"
-                    onclick="currentSlider(3)">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Images/zippy/zippy4.jfif" alt="" style="width: 100%;"
-                    onclick="currentSlider(4)">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Images/zippy/zippy5.jfif" alt="" style="width: 100%;"
-                    onclick="currentSlider(5)">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="Images/zippy/zippy6.jfif" alt="" style="width: 100%;"
-                    onclick="currentSlider(6)">
+    
+    
+        <div class="container zippySection">
+            <figure>
+                <img src="Images/thumb1.jpg" alt="" id="mainImg">
+            </figure>
+            <div class="thumb_img_list">
+                <ul>
+                    <li><img id="thumb1" src="Images/thumb1.jpg" alt=""></li>
+                    <li><img id="thumb2" src="Images/thumb2.jpg" alt=""></li>
+                    <li><img id="thumb3" src="Images/thumb3.jpg" alt=""></li>
+                    <li><img id="thumb4" src="Images/thumb4.jpg" alt=""></li>
+                    <li><img id="thumb5" src="Images/thumb5.jpg" alt=""></li>
+                    
+                </ul>
             </div>
         </div>
-    </div>
-
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlider(n) {
-            showSlides(slideIndex = n)
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("imgSlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
-        }
-
-    </script>
 
 
 
@@ -603,6 +522,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+        <script src="custom.js"></script>
 </body>
+
 
 </html>

@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+   
+    
 }
 header{
     z-index: 999;
@@ -354,33 +356,45 @@ section{
     color: white;
 }
 /* life in zippy */
-.zippyLife img{
-    vertical-align: middle;
+#mainImg{
+    display: flex;
+    justify-content: center;
+ align-items: center;
 }
-.zippyLife{
-    position: relative;
+.zippySection img{
+    max-width: 100%;
 }
-.imgSlides{
-    display: none;
+figure{
+   max-width: 800px;
+    margin: 0 auto 40px;
+    border: 2px solid #fff;
 }
-.cursor{
+figure img{
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+}
+.thumb_img_list{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.thumb_img_list ul{
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.thumb_img_list ul li{
+    display: inline-block;
+    border: 1px solid #fff;
+    width: 100px;
+    margin: 0 5px;
     cursor: pointer;
 }
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}                  
+.thumb_img_list ul li img{
+    display: block;
+}
 
 
 
