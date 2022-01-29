@@ -5,9 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-   
-    
 }
+
 header{
     z-index: 999;
     position: absolute;
@@ -17,16 +16,18 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 520px;
+    padding: 15px 720px;
     transition: 0.5s ease;
 }
+
 header .brand {
- color: white;
- font-size: 1.5em;
- font-weight: 999;
- text-transform: uppercase;
- text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 999;
+    text-transform: uppercase;
+    text-decoration: none;
 }
+
 header .navigation{
     position: relative;
 }
@@ -157,7 +158,6 @@ section{
  transition-property: clip-path;
 }
 
-
 .slider-navigation .nav-btn:not(:last-child){
     margin-right: 20px;
 }
@@ -178,7 +178,6 @@ section{
 }
 .aboutUsDown{
     text-align: center;
-    /* padding: 0px 800px; */
 }
 .icon{
     padding: 17px;
@@ -353,21 +352,21 @@ section{
     margin: 0;
     letter-spacing: 5px;
     font-size: 20px;
-    color: white;
+    color: rgb(216, 213, 213);
 }
 /* life in zippy */
-#mainImg{
-    display: flex;
-    justify-content: center;
- align-items: center;
+.zippy{
+    background-color: #e2e2e2;
+    padding-bottom: 60px;
 }
 .zippySection img{
     max-width: 100%;
 }
 figure{
-   max-width: 800px;
+    text-align: center;
+    width: 100%;
+    height: 50%;
     margin: 0 auto 40px;
-    border: 2px solid #fff;
 }
 figure img{
     display: block;
@@ -375,8 +374,6 @@ figure img{
     min-width: 100%;
 }
 .thumb_img_list{
-    display: flex;
-    justify-content: center;
     text-align: center;
 }
 .thumb_img_list ul{
@@ -395,9 +392,6 @@ figure img{
 .thumb_img_list ul li img{
     display: block;
 }
-
-
-
 
 /* signUp style */
 .signupArea{
@@ -441,8 +435,6 @@ figure img{
     color: white;
     background-color: #571580;
 }
-
-
 
 /* blog style */
 .singleBlog{
